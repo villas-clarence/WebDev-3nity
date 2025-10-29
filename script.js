@@ -1,4 +1,4 @@
-i// Smooth scrolling for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -24,26 +24,26 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Form submission handling
+
 const contactForm = document.querySelector('#contact form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Get form data
+        
         const formData = new FormData(this);
         const formValues = Object.fromEntries(formData.entries());
 
-        // Here you would typically send the form data to a server
+        
         console.log('Form submitted:', formValues);
 
-        // Show success message
+        
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
     });
 }
 
-// Login form handling
+
 const loginForm = document.querySelector('#loginForm');
 if (loginForm) {
     loginForm.addEventListener('submit', function(e) {
@@ -53,13 +53,13 @@ if (loginForm) {
         const password = document.getElementById('loginPassword').value;
         const rememberMe = document.getElementById('rememberMe').checked;
 
-        // Basic validation
+       
         if (!email || !password) {
             alert('Please fill in all fields.');
             return;
         }
 
-        // Here you would typically send login data to server
+        
         console.log('Login attempt:', { email, rememberMe });
 
         // Simulate login success (replace with actual authentication)
@@ -69,7 +69,7 @@ if (loginForm) {
     });
 }
 
-// Signup form handling
+
 const signupForm = document.querySelector('#signupForm');
 if (signupForm) {
     signupForm.addEventListener('submit', function(e) {
@@ -97,35 +97,35 @@ if (signupForm) {
             return;
         }
 
-        // Here you would typically send signup data to server
+        
         console.log('Signup attempt:', { name, email, userType });
 
-        // Simulate signup success (replace with actual registration)
+        
         alert('Account created successfully! Please check your email for verification.');
         bootstrap.Modal.getInstance(document.getElementById('signupModal')).hide();
         this.reset();
     });
 }
 
-// FAQ accordion functionality
+
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
         const isOpen = answer.classList.contains('show');
 
-        // Close all FAQ answers
+        
         document.querySelectorAll('.faq-answer').forEach(ans => {
             ans.classList.remove('show');
         });
 
-        // Toggle the clicked answer
+        
         if (!isOpen) {
             answer.classList.add('show');
         }
     });
 });
 
-// Animation on scroll
+
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.feature-card, .team-card, .service-card, .health-tip-card');
     
@@ -140,7 +140,7 @@ const animateOnScroll = () => {
     });
 };
 
-// Set initial styles for animation
+
 document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.feature-card, .team-card, .service-card, .health-tip-card');
     elements.forEach(element => {
@@ -149,9 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
     
-    // Trigger initial animation check
+    
     animateOnScroll();
 });
 
-// Add scroll event listener for animations
+
 window.addEventListener('scroll', animateOnScroll);
