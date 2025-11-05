@@ -155,3 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 window.addEventListener('scroll', animateOnScroll);
+
+// QR Scan Button Event Listener
+const qrScanBtn = document.getElementById('qrScanBtn');
+if (qrScanBtn) {
+    qrScanBtn.addEventListener('click', function() {
+        alert('QR Scan feature coming soon! This button will activate the camera to scan QR codes.');
+    });
+}

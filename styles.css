@@ -118,6 +118,22 @@ a {
     transform: translateY(-1px);
 }
 
+#qrScanBtn {
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin: 0 0.2rem;
+    color: var(--dark-color) !important;
+    transition: var(--transition);
+}
+
+#qrScanBtn:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color) !important;
+    transform: translateY(-1px);
+}
+
 /* Hero Section */
 .hero-section {
     padding: 6rem 0;
