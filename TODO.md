@@ -1,3 +1,0 @@
-- [ ] Add QR scan button to navigation bar in index.html with QR icon
-- [ ] Add placeholder click event in script.js for the QR button
-- [ ] Ensure button styling matches nav-link in styles.css
